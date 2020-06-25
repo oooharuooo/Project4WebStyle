@@ -1,19 +1,15 @@
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
-@media (min-width: 768px) {
+@media #{$small-screen} {
 
     .container {
       max-width: 1400px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      @include block-display() 
     }
     
     .centered {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      @include block-display() 
     }
     
     .row {
@@ -83,10 +79,10 @@
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
-    }
-    
-    .nav-link {
-      flex-basis: 100px;
+
+      &-link {
+          flex-basis: 100px;
+      }
     }
     
     .btn {
